@@ -1,0 +1,117 @@
+//
+//  ViewController.swift
+//  cameraBasic
+//
+//  Created by BrotherP on 2017-04-29.
+//  Copyright © 2017 BrotherP. All rights reserved.
+//
+
+import UIKit
+import AVFoundation
+
+class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINavigationControllerDelegate{
+
+    @IBOutlet weak var Library: UIImageView!
+    @IBOutlet weak var MyImageView: UIImageView!
+    
+    
+    
+    
+    
+    @IBAction func CameraAction(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
+        {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate=self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            imagePicker.allowsEditing=true;
+            self.present(imagePicker, animated: true, completion: nil)
+            
+        }
+
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            MyImageView.image = image
+            MyImageView.contentMode = .scaleAspectFit
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+    
+    @IBAction func LibraryButton(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary)
+        {
+         let imagePicker = UIImagePickerController()
+            imagePicker.delegate=self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            imagePicker.allowsEditing=true;
+            self.present(imagePicker, animated: true, completion: nil)
+            
+        }
+        
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    @IBAction func Save(_ sender: Any) {
+        let imagedata = UIImageJPEGRepresentation(MyImageView.image!, 0.6)
+        let compressImage = UIImage(data: imagedata!)
+        UIImageWriteToSavedPhotosAlbum(compressImage!, nil, nil, nil)
+        
+        
+    }
+    var captureSession = AVCaptureSession();
+       var sessionOutput = AVCapturePhotoOutput();
+    var sessionOutputSetting = AVCapturePhotoSettings(format: [AVVideoCodecKey:AVVideoCodecJPEG]);
+    var previewLayer = AVCaptureVideoPreviewLayer();
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let deviceDiscoverySession = AVCaptureDeviceDiscoverySession(deviceTypes: [AVCaptureDeviceType.builtInDuoCamera, AVCaptureDeviceType.builtInTelephotoCamera,AVCaptureDeviceType.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: AVCaptureDevicePosition.unspecified)
+        for device in (deviceDiscoverySession?.devices)! {
+            if(device.position == AVCaptureDevicePosition.front){
+                do{
+                    let input = try AVCaptureDeviceInput(device: device)
+                    captureSession.startRunning()
+
+                    if(captureSession.canAddInput(input)){
+                        captureSession.addInput(input);
+                        
+                        if(captureSession.canAddOutput(sessionOutput)){
+                            captureSession.addOutput(sessionOutput);
+                            previewLayer = AVCaptureVideoPreviewLayer(session: captureSession);
+                            previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+                            previewLayer.connection.videoOrientation = AVCaptureVideoOrientation.portrait;
+                            MyImageView.layer.addSublayer(previewLayer);
+                        }
+                    }
+                }
+                catch{
+                    print("exception!");
+                }
+            }
+        }
+    
+    }
+    
+    
+    
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+
+
+}
+
