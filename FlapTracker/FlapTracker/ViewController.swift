@@ -74,12 +74,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         
     }
-    
-    
 
- 
- 
- 
 // Function to Save Image into Documet Directory
 // End of the Code to save to Directory
     

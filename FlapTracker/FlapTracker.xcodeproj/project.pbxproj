@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B34A0B641EB6331A005E5594 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A0B631EB6331A005E5594 /* MenuTableViewController.swift */; };
+		B34A0B661EB6338C005E5594 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A0B651EB6338C005E5594 /* VideoViewController.swift */; };
+		B34A0B681EB633C6005E5594 /* VideoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A0B671EB633C6005E5594 /* VideoPreviewViewController.swift */; };
+		B34A0B6A1EB633FC005E5594 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A0B691EB633FC005E5594 /* PhotoManager.swift */; };
+		B34A0B6C1EB635CB005E5594 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A0B6B1EB635CB005E5594 /* AudioViewController.swift */; };
+		B34A0B6E1EB6360F005E5594 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A0B6D1EB6360F005E5594 /* PlayerView.swift */; };
+		B34A0B701EB63657005E5594 /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A0B6F1EB63656005E5594 /* MediaCollectionViewController.swift */; };
 		CB3EDB2B1EB427C20092BE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3EDB2A1EB427C20092BE17 /* AppDelegate.swift */; };
 		CB3EDB2D1EB427C20092BE17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3EDB2C1EB427C20092BE17 /* ViewController.swift */; };
 		CB3EDB301EB427C20092BE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3EDB2E1EB427C20092BE17 /* Main.storyboard */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B34A0B631EB6331A005E5594 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		B34A0B651EB6338C005E5594 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		B34A0B671EB633C6005E5594 /* VideoPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPreviewViewController.swift; sourceTree = "<group>"; };
+		B34A0B691EB633FC005E5594 /* PhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
+		B34A0B6B1EB635CB005E5594 /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		B34A0B6D1EB6360F005E5594 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		B34A0B6F1EB63656005E5594 /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewController.swift; sourceTree = "<group>"; };
 		CB3EDB271EB427C20092BE17 /* FlapTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlapTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3EDB2A1EB427C20092BE17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB3EDB2C1EB427C20092BE17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +80,13 @@
 				CB3EDB331EB427C20092BE17 /* LaunchScreen.storyboard */,
 				CB3EDB361EB427C20092BE17 /* Info.plist */,
 				CB3EDB601EB5375B0092BE17 /* GoogleService-Info.plist */,
+				B34A0B631EB6331A005E5594 /* MenuTableViewController.swift */,
+				B34A0B651EB6338C005E5594 /* VideoViewController.swift */,
+				B34A0B671EB633C6005E5594 /* VideoPreviewViewController.swift */,
+				B34A0B691EB633FC005E5594 /* PhotoManager.swift */,
+				B34A0B6B1EB635CB005E5594 /* AudioViewController.swift */,
+				B34A0B6D1EB6360F005E5594 /* PlayerView.swift */,
+				B34A0B6F1EB63656005E5594 /* MediaCollectionViewController.swift */,
 			);
 			path = FlapTracker;
 			sourceTree = "<group>";
@@ -102,7 +123,7 @@
 				TargetAttributes = {
 					CB3EDB261EB427C20092BE17 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 93QV2XXDCN;
+						DevelopmentTeam = 9XACG97ERB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -144,8 +165,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B34A0B6E1EB6360F005E5594 /* PlayerView.swift in Sources */,
+				B34A0B681EB633C6005E5594 /* VideoPreviewViewController.swift in Sources */,
 				CB3EDB5F1EB51D840092BE17 /* GalleryViewController.swift in Sources */,
+				B34A0B6A1EB633FC005E5594 /* PhotoManager.swift in Sources */,
+				B34A0B641EB6331A005E5594 /* MenuTableViewController.swift in Sources */,
 				CB3EDB2D1EB427C20092BE17 /* ViewController.swift in Sources */,
+				B34A0B6C1EB635CB005E5594 /* AudioViewController.swift in Sources */,
+				B34A0B701EB63657005E5594 /* MediaCollectionViewController.swift in Sources */,
+				B34A0B661EB6338C005E5594 /* VideoViewController.swift in Sources */,
 				CB3EDB2B1EB427C20092BE17 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,10 +297,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 93QV2XXDCN;
+				DEVELOPMENT_TEAM = 9XACG97ERB;
 				INFOPLIST_FILE = FlapTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Amy.FlapTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = FlapTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -282,10 +310,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 93QV2XXDCN;
+				DEVELOPMENT_TEAM = 9XACG97ERB;
 				INFOPLIST_FILE = FlapTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Amy.FlapTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = FlapTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
